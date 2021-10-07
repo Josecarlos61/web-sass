@@ -53,17 +53,13 @@ p {
   color: #868484;
 }
 
-h1 {
-  font-size: 2.1 0rem;
-}
-
 h2 {
   font-size: 2.4rem;
 }
 
 h3 {
   font-size: 2rem;
-  font-weight: lighter;
+  font-weight: bold;
 }
 
 .btn, .btn-principal, .btn-secundario {
@@ -96,6 +92,7 @@ header {
   top: 0;
   border-top: 30px solid #343533;
   width: 100%;
+  border-bottom: 2px solid #6495ed;
 }
 
 .wrapper {
@@ -160,7 +157,7 @@ nav ul a:hover {
 .presentacion h1 {
   margin-top: 0;
   padding-right: 20px;
-  font-size: 2.1 0rem;
+  font-size: 2.9rem;
 }
 
 .presentacion p {
@@ -172,22 +169,59 @@ nav ul a:hover {
   text-align: center;
 }
 
-.servicios .tipo-servicios {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-}
-
 .servicios .tipo-servicios i {
   font-size: 30px;
   color: #6495ed;
+}
+
+footer {
+  min-height: 80px;
+  background-color: #343533;
+  margin-top: 0;
+}
+
+footer .footer-content {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+@media (min-width: 1400px) {
+  nav,
+  .servicios,
+  .footer-content,
+  .presentacion {
+    width: 60%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .presentacion,
+  .tipo-servicios {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .presentacion div {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .presentacion div {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .presentacion div h1,
+  .presentacion div p {
+    padding: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */
